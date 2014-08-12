@@ -46,6 +46,8 @@
     "gulp-changed": "^0.4.1",
     "gulp-coffee": "^2.2.0",
     "gulp-filesize": "0.0.6",
+    "gulp-consolidate": "^0.1.2",
+    "gulp-iconfont": "^0.1.1",
     "gulp-imagemin": "^0.6.2",
     "gulp-karma": "0.0.4",
     "gulp-minify-css": "^0.3.11",
