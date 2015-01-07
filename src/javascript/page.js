@@ -8,14 +8,14 @@ var _ = require('underscore');
 // This combination lets this file use the jquery module bundled with
 // global.js, instead including it twice!
 
-var messageTemplate = _.template("<p>Made with <%= feels %> at <a href='<%= url %>'><%= bestCompanyEvar %>!</a></p>");
-
-var message = messageTemplate({
-  bestCompanyEvar: 'Viget',
-  feels: '♥',
-  url: 'http://viget.com'
-});
-
-$('body').append(message);
-
+// var messageTemplate = _.template("<p>Made with <%= feels %> at <a href='<%= url %>'><%= bestCompanyEvar %>!</a></p>");
+// 
+// var message = messageTemplate({
+//   bestCompanyEvar: 'Viget',
+//   feels: '♥',
+//   url: 'http://viget.com'
+// });
+// 
+// $('body').append(message);
+// 
 console.log('page.js loaded!');
