@@ -27,6 +27,16 @@ npm install d3 --save-dev
 
 **Use Rails?** Check out http://viget.com/extend/gulp-rails-asset-pipeline and https://github.com/vigetlabs/gulp-rails-pipeline
 
+Interactive scaffolding
+============
+Goal is to have a toolset ready for quick and easy creation of interactive web elements for editorial purposes on Kinja.
+
+After checking out and creating a new repo, install any new dependencies for this project like so:
+
+```bash
+# e.g., to install d3
+npm install d3 --save-dev
+```
 gulp-starter
 ============
 
