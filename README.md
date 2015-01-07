@@ -1,3 +1,14 @@
+Interactive scaffolding
+============
+Goal is to have a toolset ready for quick and easy creation of interactive web elements for editorial purposes on Kinja.
+
+After checking out and creating a new repo, install any new dependencies for this project like so:
+
+```bash
+# e.g., to install d3
+npm install d3 --save-dev
+```
+
 gulp-starter
 ============
 
