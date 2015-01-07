@@ -8,6 +8,10 @@ module.exports = {
       baseDir: dest
     }
   },
+  jasmine: {
+    src: src + "/specs/*.coffee",
+    compile_dir: src + "/specs/compiled_js/"
+  },
   sass: {
     src: src + "/sass/*.{sass,scss}",
     dest: dest,
