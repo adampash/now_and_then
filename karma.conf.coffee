@@ -9,8 +9,7 @@ module.exports = (config) ->
     preprocessors:
       '**/*.coffee': ['browserify']
       # 'src/**/*.coffee': ['coverage']
-    reporters: ['dots', 'coverage']
-
+    # reporters: ['dots', 'coverage']
 
     # browserify:
       # debug: true
