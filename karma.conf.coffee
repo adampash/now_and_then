@@ -1,6 +1,6 @@
 module.exports = (config) ->
   config.set
-    browsers: ['Chrome']
+    browsers: ['ChromeCanary']
     frameworks: ['browserify', 'jasmine']
     files: [
       'src/**/*.coffee',
@@ -8,6 +8,9 @@ module.exports = (config) ->
     ]
     preprocessors:
       '**/*.coffee': ['browserify']
+      # 'src/**/*.coffee': ['coverage']
+    reporters: ['dots', 'coverage']
+
 
     # browserify:
       # debug: true
