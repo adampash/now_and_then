@@ -8,6 +8,10 @@ module.exports = {
       baseDir: dest
     }
   },
+  karma: {
+    conf: __dirname + "/../karma.conf.coffee",
+    compile_dir: src + "/specs/compiled_js/"
+  },
   jasmine: {
     src: src + "/specs/*.coffee",
     compile_dir: src + "/specs/compiled_js/"

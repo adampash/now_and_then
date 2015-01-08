@@ -1,7 +1,5 @@
 # Browserify entry point for the global.js bundle (yay CoffeeScript!)
 
-Test = require './test'
+Test = require './test.coffee'
 
-console.log Test.init()
-
-console.log 'global.js loaded!'
+Test.init()

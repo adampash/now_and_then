@@ -3,9 +3,11 @@ Backbone   = require 'backbone'
 Backbone.$ = require 'jquery'
 plugin     = require 'plugin'
 
+template   = require './template.hbs'
+
 module.exports = Backbone.View.extend
 
-  template: require './template'
+  template: template
 
   initialize: ->
     underscoreTest = _.last([0,1,2, 'hi mom!'])
