@@ -2,7 +2,19 @@ Interactive scaffolding
 ============
 Goal is to have a toolset ready for quick and easy creation of interactive web elements for editorial purposes on Kinja.
 
-After checking out and creating a new repo, install any new dependencies for this project like so:
+To get started, [create a new repo](https://github.com/new), then do the following:
+
+```bash
+# Checkout repository
+git clone git@github.com:adampash/gulp-starter.git
+cd gulp-starter
+
+# Remove old git repo, rename folder to <repo_name>,
+# and push to new repo
+. ./new_project.sh <repo_name>
+```
+
+Next, install any new dependencies for this project like so:
 
 ```bash
 # e.g., to install d3
