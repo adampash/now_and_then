@@ -18,4 +18,3 @@ var _ = require('underscore');
 // 
 // $('body').append(message);
 // 
-console.log('page.js loaded!');
