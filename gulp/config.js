@@ -78,6 +78,14 @@ module.exports = {
       require: ['jquery', 'underscore']
 >>>>>>> Initial commit of a new project
     }, {
+      entries: src + '/javascript/generator.coffee',
+      dest: dest,
+      outputName: 'generator.js',
+      // Additional file extentions to make optional
+      extensions: ['.coffee', '.hbs'],
+      // list of modules to make require-able externally
+      require: ['jquery', 'underscore']
+    }, {
       entries: src + '/javascript/page.coffee',
       dest: dest,
       extensions: ['.coffee', '.hbs'],
