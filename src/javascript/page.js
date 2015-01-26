@@ -1,21 +1,21 @@
-// Browserify entry point for the page.js bundle (yay JavaScript!)
+var JXSlider = juxtapose.JXSlider
+slider = new JXSlider('#images',
+    [
+    {
+      src: 'http://i.kinja-img.com/gawker-media/image/upload/re0bhxxfbd7npnguebaa.jpg',
+       label: '2009',
+    },
+    {
+      src: 'http://i.kinja-img.com/gawker-media/image/upload/ne7h40kjb0eruwyvqxzv.jpg',
+       label: '2014',
+    }
+    ],
+    {
+      animate: true,
+       showLabels: false,
+       showCredits: false,
+       startingPosition: "50%"
+    });
 
-var $ = require('jquery');
-var _ = require('underscore');
-// global.js already contains jQuery, so in our config.js file, we
-// are exposing it to other files like this one in the `require` array.
-// Also in config.js, jquery is listed in `external` array for this bundle.
-// This combination lets this file use the jquery module bundled with
-// global.js, instead including it twice!
 
-// var messageTemplate = _.template("<p>Made with <%= feels %> at <a href='<%= url %>'><%= bestCompanyEvar %>!</a></p>");
-// 
-// var message = messageTemplate({
-//   bestCompanyEvar: 'Viget',
-//   feels: '♥',
-//   url: 'http://viget.com'
-// });
-// 
-// $('body').append(message);
-// 
 console.log('page.js loaded!');
