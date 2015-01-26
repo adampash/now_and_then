@@ -3,7 +3,7 @@
 git checkout --orphan gh-pages
 
 # copy build to root
-git cp -r build/ ./
+cp -r build/ ./
 
 # Remove all folders from the old working tree
 git rm -rf ./*
