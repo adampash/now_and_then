@@ -1,4 +1,8 @@
 .DS_Store
+<<<<<<< HEAD
+=======
+.sass-cache
+>>>>>>> Initial commit of a new project
 build
 Desktop.ini
 node_modules

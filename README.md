@@ -21,6 +21,7 @@ Next, install any new dependencies for this project like so:
 npm install d3 --save-dev
 ```
 
+<<<<<<< HEAD
 **Use Rails?** Check out http://viget.com/extend/gulp-rails-asset-pipeline
 
 **Lots of new stuff happening in the [2.0 branch](https://github.com/greypants/gulp-starter/tree/2.0)**
@@ -37,6 +38,8 @@ After checking out and creating a new repo, install any new dependencies for thi
 # e.g., to install d3
 npm install d3 --save-dev
 ```
+=======
+>>>>>>> Initial commit of a new project
 gulp-starter
 ============
 
@@ -49,12 +52,20 @@ Includes the following tools, tasks, and workflows:
 - [SASS](http://sass-lang.com/) (super fast libsass with [source maps](https://github.com/sindresorhus/gulp-ruby-sass#sourcemap), and [autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer))
 - [CoffeeScript](http://coffeescript.org/) (with source maps!)
 - [BrowserSync](http://browsersync.io) for live reloading and a static server
+<<<<<<< HEAD
 - [Image optimization](https://www.npmjs.com/package/gulp-imagemin)
 - Error handling in the console [and in Notification Center](https://github.com/mikaelbr/gulp-notify)
 - Shimming non common-js vendor code with other dependencies (like a jQuery plugin)
 - **New** Multiple bundles with shared dependencies
 - **New** Separate compression task for production builds
 - **New** Icon Font generation
+=======
+- [Image optimizationn](https://www.npmjs.com/package/gulp-imagemin)
+- Error handling in the console [and in Notification Center](https://github.com/mikaelbr/gulp-notify)
+- Shimming non common-js vendor code with other dependencies (like a jQuery plugin)
+- *New* Multiple bundles with shared dependencies
+- *New* Separate compression task for production builds
+>>>>>>> Initial commit of a new project
 
 If you've never used Node or npm before, you'll need to install Node.
 If you use homebrew, do:
@@ -87,12 +98,16 @@ alias gulp='node_modules/.bin/gulp'
 Now, running `gulp` in the project directory will use the version specified and installed from the `package.json` file.
 
 ### Run gulp and be amazed.
+<<<<<<< HEAD
 The first time you run the app, you'll also need to generate the iconFont, since this is not something we want to run every time with our `default` task.
 ```
 gulp iconFont
 ```
 
 After that, just run the `default` gulp task with:
+=======
+
+>>>>>>> Initial commit of a new project
 ```
 gulp
 ```
@@ -103,6 +118,7 @@ This will run the `default` gulp task defined in `gulp/tasks/default.js`, which 
 - `markup` doesn't do anything but copy an html file over from src to build, but here is where you could do additional templating work.
 - `watch` has `watchify` as a dependency, which will run the browserifyTask with a `devMode` flag that enables sourcemaps and watchify, a browserify add-on that enables caching for super fast recompiling. The task itself starts watching source files and will re-run the appropriate tasks when those files change.
 
+<<<<<<< HEAD
 ### Configuration
 All paths and plugin settings have been abstracted into a centralized config object in `gulp/config.js`. Adapt the paths and settings to the structure and needs of your project.
 
@@ -154,3 +170,11 @@ Want to just run `karma start`? Either add `alias karma="./node_modules/karma/bi
 Social icons courtesy of [icomoon.io](https://icomoon.io/#icons-icomoon)</small>
 
 Made with ♥ at [Viget](http://viget.com)!
+=======
+#### gulp production
+
+There is also a `production` task you can run with `gulp production`, which will re-build optimized, compressed css and js files to the build folder, as well as output their file sizes to the console. It's a shortcut for running the following tasks: `['images', 'minifyCss', 'uglifyJs']`.
+
+### Configuration
+All paths and plugin settings have been abstracted into a centralized config object in `gulp/config.js`. Adapt the paths and settings to the structure and needs of your project.
+>>>>>>> Initial commit of a new project

@@ -9,7 +9,12 @@ module.exports = (config) ->
     preprocessors:
       '**/*.coffee': ['browserify']
       # 'src/**/*.coffee': ['coverage']
+<<<<<<< HEAD
     # reporters: ['dots', 'coverage']
+=======
+    reporters: ['dots', 'coverage']
+
+>>>>>>> Initial commit of a new project
 
     # browserify:
       # debug: true

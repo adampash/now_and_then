@@ -4,6 +4,7 @@ module.exports = Test =
 
   foo: -> true
 
+<<<<<<< HEAD
 View = require './view'
 
 # describe 'sample', ->
@@ -26,3 +27,5 @@ View = require './view'
 #   it 'can round the sum down to the nearest integer', ->
 #     result = add 1.3, 1.19
 #     result.should.equal 2
+=======
+>>>>>>> Initial commit of a new project

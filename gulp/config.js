@@ -17,11 +17,21 @@ module.exports = {
     compile_dir: src + "/specs/compiled_js/"
   },
   sass: {
+<<<<<<< HEAD
     src: src + "/sass/**/*.{sass,scss}",
     dest: dest,
     settings: {
       indentedSyntax: true, // Enable .sass syntax!
       imagePath: 'images' // Used by the image-url helper
+=======
+    src: src + "/sass/*.{sass,scss}",
+    dest: dest,
+    settings: {
+      // Required if you want to use SASS syntax
+      // See https://github.com/dlmanning/gulp-sass/issues/81
+      sourceComments: 'map',
+      imagePath: '/images' // Used by the image-url helper
+>>>>>>> Initial commit of a new project
     }
   },
   images: {
@@ -32,6 +42,7 @@ module.exports = {
     src: src + "/htdocs/**",
     dest: dest
   },
+<<<<<<< HEAD
   iconFonts: {
     name: 'Gulp Starter Icons',
     src: src + '/icons/*.svg',
@@ -47,6 +58,8 @@ module.exports = {
       normalize: false
     }
   },
+=======
+>>>>>>> Initial commit of a new project
   browserify: {
     // A separate bundle will be generated for each
     // bundle config in the list below
@@ -57,9 +70,13 @@ module.exports = {
       // Additional file extentions to make optional
       extensions: ['.coffee', '.hbs'],
       // list of modules to make require-able externally
+<<<<<<< HEAD
       require: ['jquery', 'backbone/node_modules/underscore']
       // See https://github.com/greypants/gulp-starter/issues/87 for note about
       // why this is 'backbone/node_modules/underscore' and not 'underscore'
+=======
+      require: ['jquery', 'underscore']
+>>>>>>> Initial commit of a new project
     }, {
       entries: src + '/javascript/page.js',
       dest: dest,
