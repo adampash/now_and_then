@@ -12,3 +12,4 @@ git add .
 git commit -m "Initial commit of a new project"
 git remote add origin git@github.com:adampash/$1.git
 git push -u origin master
+npm install
