@@ -8,5 +8,13 @@ body {
 .jx-knightlab {
   display: none !important; }
 
+div.jx-arrow.jx-left {
+  border-color: transparent #fff transparent transparent;
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdBO0FBRUE7RUFDRSxBQUFTO0VBQ1QsQUFBUTs7O0FBR1Y7RUFDRSxBQUFTIiwiZmlsZSI6ImFwcC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBAaW1wb3J0IHNjc3MtbWl4aW5zXG4vLyBAaW1wb3J0IHR5cG9ncmFwaHlcbi8vIEBpbXBvcnQgaWZyYW1lc1xuQGltcG9ydCAnanV4dGFwb3NlLmNzcyc7XG5cbmJvZHkge1xuICBwYWRkaW5nOiAwO1xuICBtYXJnaW46IDA7XG59XG5cbi5qeC1rbmlnaHRsYWIge1xuICBkaXNwbGF5OiBub25lICFpbXBvcnRhbnQ7XG59XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */
+div.jx-controller {
+  display: none;
+}
+.jx-control {
+  opacity: 0.5;
+}
