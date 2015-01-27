@@ -21,7 +21,7 @@ module.exports = {
     dest: dest,
     settings: {
       indentedSyntax: true, // Enable .sass syntax!
-      imagePath: '/images' // Used by the image-url helper
+      imagePath: 'images' // Used by the image-url helper
     }
   },
   images: {
@@ -39,7 +39,7 @@ module.exports = {
     sassDest: src + '/sass',
     template: './gulp/tasks/iconFont/template.sass.swig',
     sassOutputName: '_icons.sass',
-    fontPath: '/fonts',
+    fontPath: 'fonts',
     className: 'icon',
     options: {
       fontName: 'Post-Creator-Icons',
