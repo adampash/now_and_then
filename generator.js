@@ -13,7 +13,7 @@ $('input').on('keyup', function() {
   img2 = $('#img2').val();
   url = "http://adampash.com/now_and_then/?img1=" + img1 + "&img2=" + img2;
   $('.url a').attr('href', url).text(url);
-  iframe = "<iframe class=\"custom aspect slider\" src=\"" + url + "\" height=\"265\" width=\"100%\">\n</iframe>";
+  iframe = "<iframe class=\"custom aspect slider\" src=\"" + url + "\" height=\"265\" width=\"636\">\n</iframe>";
   return $('#embed').val(iframe);
 });
 
