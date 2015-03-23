@@ -15,11 +15,120 @@
     display: inline-block
     margin: 0 5px
 @import 'juxtapose.css';
+@import "scss-mixins";
+@import "typography";
+@import "iframes";
 
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  div.container {
+    max-width: 700px;
+    margin: 40px auto;
+    .container {
+      max-width: 100%;
+    }
+  }
+  div.stories {
+    max-width: 640px;
+  }
+  div.story {
+    max-width: 32.7%;
+    display: inline-block;
+    margin-right: 5px;
+    float: left;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  h4 {
+    color: #aaa;
+    font-family: 'Proxima Nova Cond Reg';
+    font-size: 20px;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 10px;
+    padding-bottom: 5px;
+  }
+  img {
+    max-width: 100%;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    h5 {
+      font-family: 'Proxima Nova Cond Reg';
+      font-size: 15px;
+      margin-top: 0;
+      padding-top: 5px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
+@media only screen 
+and (min-device-width : 320px)
+and (max-width : 570px) {
+body {
+    div.story {
+      max-width: 32% !important;
+    }
+  }
+}
+@font-face {
+  font-family: 'Proxima Nova Semibold';
+  src: url('Proxima Nova Cond Sbold.otf');
+}
+
+@font-face {
+  font-family: 'Proxima Nova Cond Reg';
+  src: url('Proxima Nova Cond Reg.otf');
+
+}
+form {
+  width: 100%;
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+input[type=text] {
+  // max-width: 460px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+iframe {
+  border: none;
+  // width: 100%;
+}
+
+.result {
+  border-top: rgba(0,0,0,0.3) 1px dashed;
+  border-bottom: rgba(0,0,0,0.3) 1px dashed;
+  height: auto;
+  min-height: 200px;
+  &:focus {
+    outline: none;
+  }
+}
+ .embed {
+  height: 80px;
+  width: 100%;
+  border: none;
+  resize: none;
+  margin-top: 10px;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background: #eee;
+  }
+ }
 
 .jx-knightlab {
   display: none !important;
