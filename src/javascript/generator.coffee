@@ -12,7 +12,7 @@ $('input').on 'keyup', ->
   img.on 'load', ->
     height = $(@).height()
     iframe = """
-      <iframe class="custom" style="border:none;" src="#{url}" height="#{height}" width="636">
+      <iframe class="custom aspect editorial_labs_image_slider" src="#{url}" height="#{height}" width="636">
       </iframe>
     """
     $('#embed').val(iframe)
