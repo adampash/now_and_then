@@ -10,7 +10,7 @@ $('input').on 'keyup', ->
   url = "http://adampash.com/now_and_then/?img1=#{img1}&img2=#{img2}"
   $('.url a').attr('href', url).text(url)
   iframe = """
-    <iframe class="custom" style="border:none;" src="#{url}" height="265" width="100%">
+    <iframe class="custom" style="border:none;" src="#{url}" height="265" width="636">
     </iframe>
   """
   $('#embed').val(iframe)
