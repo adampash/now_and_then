@@ -6,8 +6,9 @@ $('#embed, input').on 'click', ->
 $('input').on 'keyup', ->
   img1 = $('#img1').val()
   img2 = $('#img2').val()
+  start = $('#start-position').val()
 
-  url = "http://adampash.com/now_and_then/?img1=#{img1}&img2=#{img2}"
+  url = "http://gawker-labs.com/slider/?img1=#{img1}&img2=#{img2}&start=#{start}"
   img = $("<img style=\"display:none;\" width=\"636\">").attr('src', img1)
   img.on 'load', ->
     height = $(@).height()
@@ -18,5 +19,3 @@ $('input').on 'keyup', ->
     $('#embed').val(iframe)
     $('.preview').html(iframe)
   $('body').append(img)
-  # $('.url a').attr('href', url).text(url)
-
