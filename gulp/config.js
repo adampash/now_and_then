@@ -44,7 +44,7 @@ module.exports = {
       // Additional file extentions to make optional
       extensions: ['.coffee', '.hbs'],
       // list of modules to make require-able externally
-      require: ['jquery', 'underscore']
+      require: ['jquery']
     }, {
       entries: src + '/javascript/generator.coffee',
       dest: dest,
@@ -52,14 +52,14 @@ module.exports = {
       // Additional file extentions to make optional
       extensions: ['.coffee', '.hbs'],
       // list of modules to make require-able externally
-      require: ['jquery', 'underscore']
+      require: ['jquery']
     }, {
       entries: src + '/javascript/page.coffee',
       dest: dest,
       extensions: ['.coffee', '.hbs'],
       outputName: 'page.js',
       // list of externally available modules to exclude from the bundle
-      external: ['jquery', 'underscore']
+      external: ['jquery']
     }]
   },
   production: {
