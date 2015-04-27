@@ -5,7 +5,7 @@ module.exports = {
   browserSync: {
     server: {
       // Serve up our build folder
-      baseDir: dest
+      baseDir: './'
     }
   },
   karma: {
@@ -21,7 +21,7 @@ module.exports = {
     dest: dest,
     settings: {
       indentedSyntax: true, // Enable .sass syntax!
-      imagePath: 'images' // Used by the image-url helper
+      imagePath: 'images', // Used by the image-url helper
       sourceComments: 'map',
     }
   },
@@ -58,7 +58,6 @@ module.exports = {
       // Additional file extentions to make optional
       extensions: ['.coffee', '.hbs'],
       // list of modules to make require-able externally
-      require: ['jquery', 'backbone/node_modules/underscore']
       // See https://github.com/greypants/gulp-starter/issues/87 for note about
       // why this is 'backbone/node_modules/underscore' and not 'underscore'
       require: ['jquery']

@@ -11,10 +11,7 @@
 var browserify   = require('browserify');
 var browserSync  = require('browser-sync');
 var watchify     = require('watchify');
-<<<<<<< HEAD
 var mergeStream  = require('merge-stream');
-=======
->>>>>>> Initial commit of a new project
 var bundleLogger = require('../util/bundleLogger');
 var gulp         = require('gulp');
 var handleErrors = require('../util/handleErrors');
@@ -22,30 +19,18 @@ var source       = require('vinyl-source-stream');
 var config       = require('../config').browserify;
 var _            = require('lodash');
 
-<<<<<<< HEAD
-var browserifyTask = function(devMode) {
-=======
 var browserifyTask = function(callback, devMode) {
 
   var bundleQueue = config.bundleConfigs.length;
->>>>>>> Initial commit of a new project
-
   var browserifyThis = function(bundleConfig) {
 
     if(devMode) {
       // Add watchify args and debug (sourcemaps) option
-<<<<<<< HEAD
       _.extend(bundleConfig, watchify.args, { debug: true });
       // A watchify require/external bug that prevents proper recompiling,
       // so (for now) we'll ignore these options during development. Running
       // `gulp browserify` directly will properly require and externalize.
       bundleConfig = _.omit(bundleConfig, ['external', 'require']);
-=======
-      _.extend(bundleConfig, watchify.args, { debug: true })
-      // A watchify require/external bug that prevents proper recompiling,
-      // so (for now) we'll ignore these options during development
-      bundleConfig = _.omit(bundleConfig, ['external', 'require'])
->>>>>>> Initial commit of a new project
     }
 
     var b = browserify(bundleConfig);
@@ -64,14 +49,8 @@ var browserifyTask = function(callback, devMode) {
         .pipe(source(bundleConfig.outputName))
         // Specify the output destination
         .pipe(gulp.dest(bundleConfig.dest))
-<<<<<<< HEAD
-        .pipe(browserSync.reload({
-          stream: true
-        }));
-=======
         .on('end', reportFinished)
         .pipe(browserSync.reload({stream:true}));
->>>>>>> Initial commit of a new project
     };
 
     if(devMode) {
@@ -79,7 +58,6 @@ var browserifyTask = function(callback, devMode) {
       b = watchify(b);
       // Rebundle on update
       b.on('update', bundle);
-<<<<<<< HEAD
       bundleLogger.watch(bundleConfig.outputName);
     } else {
       // Sort out shared dependencies.
@@ -88,17 +66,6 @@ var browserifyTask = function(callback, devMode) {
       // b.external excludes modules from the bundle, and expects
       // they'll be available externally
       if(bundleConfig.external) b.external(bundleConfig.external);
-    }
-
-=======
-      bundleLogger.watch(bundleConfig.outputName)
-    } else {
-      // Sort out shared dependencies.
-      // b.require exposes modules externally
-      if(bundleConfig.require) b.require(bundleConfig.require)
-      // b.external excludes modules from the bundle, and expects
-      // they'll be available externally
-      if(bundleConfig.external) b.external(bundleConfig.external)
     }
 
     var reportFinished = function() {
@@ -110,17 +77,15 @@ var browserifyTask = function(callback, devMode) {
         if(bundleQueue === 0) {
           // If queue is empty, tell gulp the task is complete.
           // https://github.com/gulpjs/gulp/blob/master/docs/API.md#accept-a-callback
-          callback();
+          // callback();
         }
       }
     };
 
->>>>>>> Initial commit of a new project
     return bundle();
   };
 
   // Start bundling with Browserify for each bundleConfig specified
-<<<<<<< HEAD
   return mergeStream.apply(gulp, _.map(config.bundleConfigs, browserifyThis));
 
 };
@@ -131,12 +96,8 @@ gulp.task('browserify', function() {
 
 // Exporting the task so we can call it directly in our watch task, with the 'devMode' option
 module.exports = browserifyTask;
-=======
-  config.bundleConfigs.forEach(browserifyThis);
-};
 
 gulp.task('browserify', browserifyTask);
 
 // Exporting the task so we can call it directly in our watch task, with the 'devMode' option
 module.exports = browserifyTask
->>>>>>> Initial commit of a new project

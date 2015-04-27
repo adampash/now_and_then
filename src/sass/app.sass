@@ -2,6 +2,7 @@
 @import typography
 @import icons
 @import iframes
+@import juxtapose.css
 
 
 @media screen and (max-width : 480px)
@@ -14,133 +15,118 @@
   .icon
     display: inline-block
     margin: 0 5px
-@import 'juxtapose.css';
-@import "scss-mixins";
-@import "typography";
-@import "iframes";
 
-body {
+body
   margin: 0;
   padding: 0;
-  div.container {
+  div.container
     max-width: 700px;
     margin: 40px auto;
-    .container {
+    .container
       max-width: 100%;
-    }
-  }
-  div.stories {
+  div.stories
     max-width: 640px;
-  }
-  div.story {
+  div.story
     max-width: 32.7%;
     display: inline-block;
     margin-right: 5px;
     float: left;
-    &:last-child {
+    &:last-child
       margin-right: 0;
-    }
-  }
-  h4 {
+  h4
     color: #aaa;
     font-family: 'Proxima Nova Cond Reg';
     font-size: 20px;
     border-bottom: 1px solid #ddd;
     margin: 0 0 10px;
     padding-bottom: 5px;
-  }
-  img {
+  img
     max-width: 100%;
-  }
-  a {
+  a
     text-decoration: none;
     color: black;
-    h5 {
+    h5
       font-family: 'Proxima Nova Cond Reg';
       font-size: 15px;
       margin-top: 0;
       padding-top: 5px;
-    }
-    &:hover {
+    &:hover
       text-decoration: underline;
-    }
-  }
-}
-@media only screen 
-and (min-device-width : 320px)
-and (max-width : 570px) {
-body {
-    div.story {
-      max-width: 32% !important;
-    }
-  }
-}
-@font-face {
-  font-family: 'Proxima Nova Semibold';
-  src: url('Proxima Nova Cond Sbold.otf');
-}
-
-@font-face {
-  font-family: 'Proxima Nova Cond Reg';
-  src: url('Proxima Nova Cond Reg.otf');
-
-}
-form {
+form
   width: 100%;
-}
 
-input {
-  &:focus {
+input
+  &:focus
     outline: none;
-  }
-}
-input[type=text] {
+input[type=text], input[type=number]
   // max-width: 460px;
   width: 100%;
   margin-bottom: 10px;
   padding: 10px;
   font-size: 15px;
-}
 
-iframe {
+iframe
   border: none;
   // width: 100%;
-}
 
-.result {
-  border-top: rgba(0,0,0,0.3) 1px dashed;
-  border-bottom: rgba(0,0,0,0.3) 1px dashed;
-  height: auto;
-  min-height: 200px;
-  &:focus {
-    outline: none;
-  }
-}
- .embed {
+// .result
+  // border-top: rgba(0,0,0,0.3) 1px dashed
+  // border-bottom: rgba(0,0,0,0.3) 1px dashed
+  // height: auto
+  // min-height: 200px
+  // &:focus
+  //   outline: none
+.embed
   height: 80px;
   width: 100%;
   border: none;
   resize: none;
   margin-top: 10px;
-  &:focus {
+  &:focus
     outline: none;
-  }
-  &:hover {
+  &:hover
     background: #eee;
-  }
- }
 
-.jx-knightlab {
+
+.jx-knightlab
   display: none !important;
-}
 
-div.jx-arrow.jx-left {
+div.jx-arrow.jx-right
+  border-width: 19px 0 19px 19px
+  right: 0
+
+div.jx-arrow.jx-left
   border-color: transparent #fff transparent transparent;
-}
+  border-width: 19px 19px 19px 0
+  left: 0
 
-div.jx-controller {
+div.jx-controller
   display: none;
-}
-.jx-control {
-  opacity: 0.5;
-}
+.jx-control
+  // opacity: 0.5;
+div.jx-handle:hover
+  div.jx-arrow.jx-left
+    left: 0 !important
+  div.jx-arrow.jx-right
+    right: 0 !important
+div.jx-slider:hover
+  div.jx-arrow.jx-left
+    left: -18px
+  div.jx-arrow.jx-right
+    right: -18px
+
+.black
+  .jx-control
+    background: black
+  div.jx-arrow.jx-left
+    border-color: transparent #000 transparent transparent;
+  div.jx-arrow.jx-right
+    border-color: transparent transparent transparent #000;
+
+.red
+  .jx-control
+    background: #EF2C12
+  div.jx-arrow.jx-left
+    border-color: transparent #EF2C12 transparent transparent;
+  div.jx-arrow.jx-right
+    border-color: transparent transparent transparent #EF2C12
